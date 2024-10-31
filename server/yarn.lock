@@ -39,21 +39,6 @@
     node-fetch "^2.6.7"
     web-streams-polyfill "^3.2.1"
 
-"@anthropic-ai/sdk@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@anthropic-ai/sdk/-/sdk-0.9.1.tgz#b2d2b7bf05c90dce502c9a2e869066870f69ba88"
-  integrity sha512-wa1meQ2WSfoY8Uor3EdrJq0jTiZJoKoSii2ZVWRY1oN4Tlr5s59pADg9T79FTbPe1/se5c3pBeZgJL63wmuoBA==
-  dependencies:
-    "@types/node" "^18.11.18"
-    "@types/node-fetch" "^2.6.4"
-    abort-controller "^3.0.0"
-    agentkeepalive "^4.2.1"
-    digest-fetch "^1.3.0"
-    form-data-encoder "1.7.2"
-    formdata-node "^4.3.2"
-    node-fetch "^2.6.7"
-    web-streams-polyfill "^3.2.1"
-
 "@apache-arrow/ts@^14.0.2":
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/@apache-arrow/ts/-/ts-14.0.2.tgz#31625975714ca172225b305190fc05fae705c0c9"
@@ -603,7 +588,7 @@
     zod "^3.22.4"
     zod-to-json-schema "^3.22.4"
 
-"@langchain/community@0.0.53", "@langchain/community@~0.0.47":
+"@langchain/community@0.0.53":
   version "0.0.53"
   resolved "https://registry.yarnpkg.com/@langchain/community/-/community-0.0.53.tgz#a9aaedffa0ed2977e8d302d74e9f90a49a6da037"
   integrity sha512-iFqZPt4MRssGYsQoKSXWJQaYTZCC7WNuilp2JCCs3wKmJK3l6mR0eV+PDrnT+TaDHUVxt/b0rwgM0sOiy0j2jA==
@@ -646,13 +631,30 @@
     zod "^3.22.4"
     zod-to-json-schema "^3.22.3"
 
-"@langchain/textsplitters@0.0.0", "@langchain/textsplitters@~0.0.0":
+"@langchain/openai@>=0.1.0 <0.4.0":
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@langchain/openai/-/openai-0.3.11.tgz#c93ee298a87318562a1da6c2915a180fe5155ac4"
+  integrity sha512-mEFbpJ8w8NPArsquUlCwxvZTKNkXxqwzvTEYzv6Jb7gUoBDOZtwLg6AdcngTJ+w5VFh3wxgPy0g3zb9Aw0Qbpw==
+  dependencies:
+    js-tiktoken "^1.0.12"
+    openai "^4.68.0"
+    zod "^3.22.4"
+    zod-to-json-schema "^3.22.3"
+
+"@langchain/textsplitters@0.0.0":
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/@langchain/textsplitters/-/textsplitters-0.0.0.tgz#5fe05fcd86ad7f1b4766afacda482cba98a3d35d"
   integrity sha512-3hPesWomnmVeYMppEGYbyv0v/sRUugUdlFBNn9m1ueJYHAIKbvCErkWxNUH3guyKKYgJVrkvZoQxcd9faucSaw==
   dependencies:
     "@langchain/core" "~0.1"
     js-tiktoken "^1.0.11"
+
+"@langchain/textsplitters@>=0.0.0 <0.2.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@langchain/textsplitters/-/textsplitters-0.1.0.tgz#f37620992192df09ecda3dfbd545b36a6bcbae46"
+  integrity sha512-djI4uw9rlkAb5iMhtLED+xJebDdAG935AdP4eRTB02R7OB/act55Bj9wsskhZsvuyQRpO4O1wQOp85s6T6GWmw==
+  dependencies:
+    js-tiktoken "^1.0.12"
 
 "@mapbox/node-pre-gyp@^1.0.11":
   version "1.0.11"
@@ -1176,6 +1178,11 @@
   resolved "https://registry.yarnpkg.com/@types/triple-beam/-/triple-beam-1.3.5.tgz#74fef9ffbaa198eb8b588be029f38b00299caa2c"
   integrity sha512-6WaYesThRMCl19iryMYP7/x2OVgCtbIVflDGFpWnb9irXI3UjYE4AzmYuiUKY1AJstGijoY+MgUszMgRxIYTYw==
 
+"@types/uuid@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-10.0.0.tgz#e9c07fe50da0f53dc24970cca94d619ff03f6f6d"
+  integrity sha512-7gqG38EyHgyP1S+7+xomFtL+ZNHcKv6DwNaCZmJmo1vgMugyF3TCnXVg4t1uk89mLNwnLtnY3TpOpCOyp1/xHQ==
+
 "@types/uuid@^9.0.1":
   version "9.0.8"
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.8.tgz#7545ba4fc3c003d6c756f651f3bf163d8f0f29ba"
@@ -1640,7 +1647,7 @@ bignumber.js@^9.0.0:
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-9.1.2.tgz#b7c4242259c008903b13707983b5f4bbd31eda0c"
   integrity sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==
 
-binary-extensions@^2.0.0, binary-extensions@^2.2.0:
+binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
   integrity sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==
@@ -3931,6 +3938,13 @@ js-tiktoken@^1.0.11, js-tiktoken@^1.0.7, js-tiktoken@^1.0.8:
   dependencies:
     base64-js "^1.5.1"
 
+js-tiktoken@^1.0.12:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/js-tiktoken/-/js-tiktoken-1.0.15.tgz#92a7d829f6950c2cfb35cc52555502e3d6e2ebac"
+  integrity sha512-65ruOWWXDEZHHbAo7EjOcNxOGasQKbL4Fq3jEr2xsCqSsoOo6VVSqzWQb6PRIqypFSDcma4jO90YP0w5X8qVXQ==
+  dependencies:
+    base64-js "^1.5.1"
+
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -4102,34 +4116,35 @@ ky@^0.33.1:
   resolved "https://registry.yarnpkg.com/ky/-/ky-0.33.3.tgz#bf1ad322a3f2c3428c13cfa4b3af95e6c4a2f543"
   integrity sha512-CasD9OCEQSFIam2U8efFK81Yeg8vNMTBUqtMOHlrcWQHqUX3HeCl9Dr31u4toV7emlH8Mymk5+9p0lL6mKb/Xw==
 
-langchain@0.1.36:
-  version "0.1.36"
-  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.1.36.tgz#2f201f681d83fb265716e28e7dfcfe61fbeef2c2"
-  integrity sha512-NTbnCL/jKWIeEI//Nm1oG8nhW3vkYWvEMr1MPotmTThTfeKfO87eV/OAzAyh6Ruy6GFs/qofRgQZGIe6XvXTNQ==
+langchain@0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/langchain/-/langchain-0.3.3.tgz#4e1157d00ea9973486ba996d106670afd405793f"
+  integrity sha512-xy63PAh1PUuF2VdjLxacP8SeUQKF++ixvAhMhl/+3GkzloEKce41xlbQC3xNGVToYaqzIsDrueps/JU0zYYXHw==
   dependencies:
-    "@anthropic-ai/sdk" "^0.9.1"
-    "@langchain/community" "~0.0.47"
-    "@langchain/core" "~0.1.60"
-    "@langchain/openai" "~0.0.28"
-    "@langchain/textsplitters" "~0.0.0"
-    binary-extensions "^2.2.0"
-    js-tiktoken "^1.0.7"
+    "@langchain/openai" ">=0.1.0 <0.4.0"
+    "@langchain/textsplitters" ">=0.0.0 <0.2.0"
+    js-tiktoken "^1.0.12"
     js-yaml "^4.1.0"
     jsonpointer "^5.0.1"
-    langchainhub "~0.0.8"
-    langsmith "~0.1.7"
-    ml-distance "^4.0.0"
+    langsmith "^0.1.56"
     openapi-types "^12.1.3"
     p-retry "4"
-    uuid "^9.0.0"
+    uuid "^10.0.0"
     yaml "^2.2.1"
     zod "^3.22.4"
     zod-to-json-schema "^3.22.3"
 
-langchainhub@~0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/langchainhub/-/langchainhub-0.0.8.tgz#fd4b96dc795e22e36c1a20bad31b61b0c33d3110"
-  integrity sha512-Woyb8YDHgqqTOZvWIbm2CaFDGfZ4NTSyXV687AG4vXEfoNo7cGQp7nhl7wL3ehenKWmNEmcxCLgOZzW8jE6lOQ==
+langsmith@^0.1.56:
+  version "0.1.68"
+  resolved "https://registry.yarnpkg.com/langsmith/-/langsmith-0.1.68.tgz#848332e822fe5e6734a07f1c36b6530cc1798afb"
+  integrity sha512-otmiysWtVAqzMx3CJ4PrtUBhWRG5Co8Z4o7hSZENPjlit9/j3/vm3TSvbaxpDYakZxtMjhkcJTqrdYFipISEiQ==
+  dependencies:
+    "@types/uuid" "^10.0.0"
+    commander "^10.0.1"
+    p-queue "^6.6.2"
+    p-retry "4"
+    semver "^7.6.3"
+    uuid "^10.0.0"
 
 langsmith@~0.1.1, langsmith@~0.1.7:
   version "0.1.21"
@@ -4989,6 +5004,19 @@ openai@^4.32.1:
     node-fetch "^2.6.7"
     web-streams-polyfill "^3.2.1"
 
+openai@^4.68.0:
+  version "4.69.0"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.69.0.tgz#ac2463719280987e506e4bd62dd477337e2406a1"
+  integrity sha512-S3hOHSkk609KqwgH+7dwFrSvO3Gm3Nk0YWGyPHNscoMH/Y2tH1qunMi7gtZnLbUv4/N1elqCp6bDior2401kCQ==
+  dependencies:
+    "@types/node" "^18.11.18"
+    "@types/node-fetch" "^2.6.4"
+    abort-controller "^3.0.0"
+    agentkeepalive "^4.2.1"
+    form-data-encoder "1.7.2"
+    formdata-node "^4.3.2"
+    node-fetch "^2.6.7"
+
 openapi-types@^12.1.3:
   version "12.1.3"
   resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-12.1.3.tgz#471995eb26c4b97b7bd356aacf7b91b73e777dd3"
@@ -5648,6 +5676,11 @@ semver@^7.3.5, semver@^7.5.4:
   integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
   dependencies:
     lru-cache "^6.0.0"
+
+semver@^7.6.3:
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
+  integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
 semver@~7.0.0:
   version "7.0.0"
@@ -6412,6 +6445,11 @@ uuid-apikey@^1.5.3:
     commander "^8.0.0"
     encode32 "^1.1.0"
     uuid "^8.3.1"
+
+uuid@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-10.0.0.tgz#5a95aa454e6e002725c79055fd42aaba30ca6294"
+  integrity sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==
 
 uuid@^8.3.0, uuid@^8.3.1:
   version "8.3.2"
